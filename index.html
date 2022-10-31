@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background</title>
+</head>
+<style>
+        body{
+            margin: 0;padding: 0;
+        }
+        #header{
+            position: relative;
+            width: 100%;
+            
+           
+            background-size: 160%;
+            background-position: center;
+            background-attachment: fixed;
+            height: 100vh;
+        } 
+        .image1{
+             background-image: url("/img/1.jpg");
+        }
+        .image2{
+            background-image: url("/img/2.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+
+        } .image3{
+            background-image: url("/img/3.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+        section{
+            padding: 100px;
+            color: black;
+        }
+
+</style>
+<body>
+ 
+    <div id="header"class="image1">
+    </div>
+   
+    <div id="header" class="image2">
+        
+    </div>
+     <div id="header" class="image3">
+       
+    </div>
+
+</body>
+<script type="text/javascript">
+    const bg = document.getElementById('header')
+    window.addEventListener('scroll',function (){
+        bg.style.backgroundSize = 160- + window.pageYOffset/12 + '%';
+        bg.style.opacity = 1 - +window.pageYOffset/700+''
+    })
+  
+    </script>
+</html>
